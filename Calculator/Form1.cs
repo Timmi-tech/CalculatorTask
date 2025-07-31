@@ -43,8 +43,11 @@ namespace Calculator
             else
                 txtDisplay.Text = "0";
         }
-
-
+        private void BtnPM_Click(object sender, EventArgs e)
+        {
+            if (decimal.TryParse(txtDisplay.Text, out decimal value))
+                txtDisplay.Text = (-value).ToString();
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             txtDisplay.Text = "0";

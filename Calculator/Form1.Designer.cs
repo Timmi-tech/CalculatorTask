@@ -64,7 +64,6 @@
             panel1.Controls.Add(btn5);
             panel1.Controls.Add(btn8);
             panel1.Controls.Add(btnCE);
-            panel1.Controls.Add(button2);
             panel1.Controls.Add(btnSub);
             panel1.Controls.Add(btnDiv);
             panel1.Controls.Add(btnMult);
@@ -76,7 +75,6 @@
             panel1.Controls.Add(btn6);
             panel1.Controls.Add(btn9);
             panel1.Controls.Add(btnC);
-            panel1.Controls.Add(button8);
             panel1.Controls.Add(btn1);
             panel1.Controls.Add(btn4);
             panel1.Controls.Add(btn7);
@@ -205,7 +203,7 @@
             btnPM.TabIndex = 1;
             btnPM.Text = "±";
             btnPM.UseVisualStyleBackColor = true;
-            btnPM.Click += button1_Click;
+            btnPM.Click += BtnPM_Click;
             // 
             // btn0
             // 
