@@ -7,6 +7,14 @@ namespace Calculator
         public Form1()
         {
             InitializeComponent();
+            this.Resize += Form1_Resize;
+        }
+
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            // Center the panel in the form
+            panel1.Left = (this.ClientSize.Width - panel1.Width) / 2;
+            panel1.Top = (this.ClientSize.Height - panel1.Height) / 2;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -25,7 +33,23 @@ namespace Calculator
             try
             {
                 var result = new DataTable().Compute(txtDisplay.Text, null);
-                txtDisplay.Text = result.ToString();
+
+                // Convert to double for better validation
+                if (double.TryParse(result.ToString(), out double numericResult))
+                {
+                    if (double.IsInfinity(numericResult) || double.IsNaN(numericResult))
+                    {
+                        txtDisplay.Text = "Error";
+                    }
+                    else
+                    {
+                        txtDisplay.Text = numericResult.ToString();
+                    }
+                }
+                else
+                {
+                    txtDisplay.Text = "Error";
+                }
             }
             catch
             {
@@ -51,6 +75,8 @@ namespace Calculator
         private void Form1_Load(object sender, EventArgs e)
         {
             txtDisplay.Text = "0";
+            this.WindowState = FormWindowState.Maximized;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
     }
 }

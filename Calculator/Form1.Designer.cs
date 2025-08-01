@@ -34,7 +34,6 @@
             btn5 = new Button();
             btn8 = new Button();
             btnCE = new Button();
-            button2 = new Button();
             btnSub = new Button();
             btnDiv = new Button();
             btnMult = new Button();
@@ -46,12 +45,13 @@
             btn6 = new Button();
             btn9 = new Button();
             btnC = new Button();
-            button8 = new Button();
             btn1 = new Button();
             btn4 = new Button();
             btn7 = new Button();
             btnBackSpace = new Button();
             txtDisplay = new TextBox();
+            button2 = new Button();
+            button8 = new Button();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -139,16 +139,6 @@
             btnCE.Text = "CE";
             btnCE.UseVisualStyleBackColor = true;
             btnCE.Click += BtnClear_Click;
-            // 
-            // button2
-            // 
-            button2.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.Location = new Point(92, 62);
-            button2.Name = "button2";
-            button2.Size = new Size(77, 76);
-            button2.TabIndex = 1;
-            button2.UseVisualStyleBackColor = true;
-            button2.Click += button1_Click;
             // 
             // btnSub
             // 
@@ -271,16 +261,6 @@
             btnC.UseVisualStyleBackColor = true;
             btnC.Click += BtnClear_Click;
             // 
-            // button8
-            // 
-            button8.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button8.Location = new Point(9, 390);
-            button8.Name = "button8";
-            button8.Size = new Size(77, 76);
-            button8.TabIndex = 1;
-            button8.UseVisualStyleBackColor = true;
-            button8.Click += button1_Click;
-            // 
             // btn1
             // 
             btn1.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -336,6 +316,26 @@
             txtDisplay.Text = "0";
             txtDisplay.TextAlign = HorizontalAlignment.Right;
             // 
+            // button2
+            // 
+            button2.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button2.Location = new Point(92, 62);
+            button2.Name = "button2";
+            button2.Size = new Size(77, 76);
+            button2.TabIndex = 1;
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button1_Click;
+            // 
+            // button8
+            // 
+            button8.Font = new Font("Microsoft Sans Serif", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button8.Location = new Point(9, 390);
+            button8.Name = "button8";
+            button8.Size = new Size(77, 76);
+            button8.TabIndex = 1;
+            button8.UseVisualStyleBackColor = true;
+            button8.Click += button1_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -343,7 +343,7 @@
             ClientSize = new Size(371, 498);
             Controls.Add(panel1);
             Name = "Form1";
-            Text = "Form1";
+            Text = "Calculator";
             Load += Form1_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
